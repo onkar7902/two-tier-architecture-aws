@@ -130,12 +130,7 @@ This project is ideal for:
 
 ---
 
-## 📘 Part 7: Documentation & Best Practices
-
-### 📌 Architecture Diagram
-*(To be added using draw.io, Lucidchart, or AWS icons)*  
-Includes:  
-VPC → Subnets → ALB → ASG EC2 → RDS → Secrets Manager → Monitoring
+## 📘 Part 7: Best Practices Followed
 
 ### 🧠 Best Practices Followed
 
