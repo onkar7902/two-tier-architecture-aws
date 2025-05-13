@@ -14,33 +14,33 @@ sudo dnf install git -y
 
 Replace the server block in /etc/nginx/nginx.conf with the content from the nginx_config file.
 
-# Update the nginx configuration file
+### Update the nginx configuration file
 ```
 sudo sed -i 's/update-me/localhost:8080/g' /etc/nginx/nginx.conf
 ```
 
-# Start and enable the Nginx service
+### Start and enable the Nginx service
 ```
 sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
 
-# Navigate to Nginx's root directory
+### Navigate to Nginx's root directory
 ```
 cd /usr/share/nginx/html
 ```
 
-# Clone the frontend files from the GitHub repository
+### Clone the frontend files from the GitHub repository
 ```
 sudo git clone https://github.com/onkar7902/two-tier-architecture-aws.git
 ```
 
-# Move frontend files to the nginx HTML root
+### Move frontend files to the nginx HTML root
 ```
 sudo mv two-tier-architecture-aws/frontend/* /usr/share/nginx/html
 ```
 
-# Clean up the cloned repository
+### Clean up the cloned repository
 ```
 sudo rm -rf /usr/share/nginx/html/two-tier-architecture-aws
 ```
@@ -51,18 +51,18 @@ sudo rm -rf /usr/share/nginx/html/two-tier-architecture-aws
 https://docs.aws.amazon.com/linux/al2023/ug/ec2-lamp-amazon-linux-2023.html
 
 
-# Update Apache config to listen on port 8080
+### Update Apache config to listen on port 8080
 ```
 sudo sed -i 's/^Listen 80$/Listen 8080/' /etc/httpd/conf/httpd.conf
 ```
 
-# Start and enable Apache
+### Start and enable Apache
 ```
 sudo systemctl start httpd
 sudo systemctl enable httpd
 ```
 
-# Assign Apache group permissions to ec2-user for file management
+### Assign Apache group permissions to ec2-user for file management
 ```
 sudo usermod -a -G apache ec2-user
 sudo chown -R ec2-user:apache /var/www
