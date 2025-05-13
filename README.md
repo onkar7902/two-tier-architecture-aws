@@ -37,6 +37,28 @@ This project is ideal for:
 - **Backend Logic**: PHP
 - **Database**: (e.g., MySQL, PostgreSQL) – with SSL/TLS enabled
 
+## Directory Structure
+
+```
+two-tier-architecture-aws/
+├── frontend/
+│   ├── index.html            # Main HTML file
+│   ├── styles.css            # CSS styles
+│
+├── backend/
+│   └── api/                  # API endpoints
+│       ├── get_messages.php  # API to retrieve messages
+│       ├── save_message.php  # API to save new messages
+│       └── db_connection.php # Database connection utility
+│
+├── database/
+│   └── database_setup.sql    # SQL schema and initial data
+│
+└── infrastructure/           # AWS infrastructure configurations
+    ├── web_server.md     # web server configurations
+    ├── nginx_config     # Nginx server configurations
+```
+
 
 ## 🔧 Part 1: Infrastructure Setup
 
