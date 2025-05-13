@@ -4,7 +4,7 @@ This repository contains a simple "Hello World" web application built using a tw
 
 ## Architecture Overview
 
-![alt text](aws-three-tier-architecture.png)
+![alt text](aws-two-tier-architecture.png)
 
 The application is divided into two main tiers:
 
